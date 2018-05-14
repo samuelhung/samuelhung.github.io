@@ -3,19 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Mr.H&#39;Blog</title>
+  <title>分类 | Mr.H&#39;Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
   
   <meta property="og:type" content="website">
-<meta property="og:title" content="Mr.H&#39;Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:title" content="分类">
+<meta property="og:url" content="http://yoursite.com/categories/index.html">
 <meta property="og:site_name" content="Mr.H&#39;Blog">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-05-14T08:51:05.817Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mr.H&#39;Blog">
+<meta name="twitter:title" content="分类">
   
     <link rel="alternate" href="/atom.xml" title="Mr.H&#39;Blog" type="application/atom+xml">
   
@@ -44,15 +45,17 @@
   <link rel="stylesheet" href="/css/bootstrap.css" >
 
   
-    <link rel="stylesheet" href="/css/home.css" >
-  
-
-  
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
+    <link rel="stylesheet" href="/css/dialog.css">
   
 
   
 
+  
+    <link rel="stylesheet" href="/css/header-post.css" >
+  
+
+  
+    <link rel="stylesheet" href="/css/archive.css" >
   
   
   
@@ -65,120 +68,103 @@
 
 
   
-    <header id="header">
-
-	<!-- 背景图模式 -->
-	
-
-    
-      <div id="intrologo" class="intro-logo">
-    
- 
-
-
-    <canvas width="100%" height="100%"></canvas>
-    <script>
-      var c = document.getElementsByTagName('canvas')[0],
-          x = c.getContext('2d'),
-          w = window.innerWidth,
-          h = window.innerHeight,
-          pr = window.devicePixelRatio || 1,
-          f = 90,
-          q,
-          m = Math,
-          r = 0,
-          u = m.PI*2,
-          v = m.cos,
-          z = m.random
-      c.width = w*pr
-      c.height = h*pr
-      x.scale(pr, pr)
-      x.globalAlpha = 0.6
-
-      <!-- 折线Polyline背景 -->
-      
-		 function redraw(){
-		 	var pattern = Trianglify({
-				width: window.innerWidth,
-				height: window.innerHeight
-			});
-            pattern.canvas(c)
-        }
-        document.getElementById("intrologo").onclick = redraw
-        document.getElementById("intrologo").ontouchstart = redraw
-		redraw()
-      
-    </script>
-    
-
-    
-      <div id="homelogo" class="homelogo" style="background: rgba(255,255,255,1);"> 
-    
-
-        
-          <div class="homelogoback"  style="border: 1px solid #404040;" >
-            <h1><a href="#content" id="logo">Mr.H&#39;Blog</a></h1>
-            <h3></h3>
-            <h5>Yuk Hung</h5>
-            <!-- <p><a href="https://github.com/iTimeTraveler" target="_blank">Github</a></p> -->
-          </div>
-        
-    
-    </div>
-  </div>
-
-  <!-- 自适应主页背景大图 -->
-  
-
- <!-- home_logo_image居中 -->
- 
-    <script>
-        var homelogodiv = document.getElementById("homelogo");
-        if (document.all.homelogo.offsetWidth > document.body.clientWidth) {
-          homelogodiv.style.width = document.body.clientWidth + "px";
-          homelogodiv.style.marginLeft = document.body.clientWidth * -0.5 + "px";
-        } else {
-          homelogodiv.style.width = homelogodiv.clientWidth  + "px";
-          homelogodiv.style.marginLeft = (homelogodiv.clientWidth)  * -0.5 + "px";
-        }
-    </script>
-  
-
-  <div class="intro-navigate">
-      <p class="navigater-list">
-        
-          <a id="beautifont" class="main-nav-link" href="/">首页</a>
-        
-          <a id="beautifont" class="main-nav-link" href="/archives">归档</a>
-        
-          <a id="beautifont" class="main-nav-link" href="/categories">分类</a>
-        
-          <a id="beautifont" class="main-nav-link" href="/tags">标签</a>
-        
-          <a id="beautifont" class="main-nav-link" href="/about">关于</a>
-        
-      </p>
-  </div>
-
-</header>
-  
   <div id="container">
     <div id="wrap">
+      
+        <header>
+
+    <div id="allheader" class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="navbar-inner">
+          
+          <div class="container"> 
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            
+              <a class="brand" style="
+                 margin-top: 0px;"  
+                 >
+                  <img width="124px" height="124px" alt="Hike News" src="/css/images/mylogo.jpg">
+              </a>
+            
+            
+            <div class="navbar-collapse collapse">
+              <ul class="hnav navbar-nav">
+                
+                  <li> <a class="main-nav-link" href="/">首页</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/archives">归档</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/categories">分类</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/tags">标签</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/about">关于</a> </li>
+                
+                  <li><div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div></li>
+            </div>
+          </div>
+                
+      </div>
+    </div>
+
+</header>
+
+
+
       
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;">
-  
-    <article id="post-五年"  class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="page-"  class="article article-type-page" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
       <header class="article-header">
         
   
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/05/14/五年/">五年</a>
+    <h1 class="thumb" class="article-title" itemprop="name">
+      分类
     </h1>
   
 
@@ -186,8 +172,8 @@
     
     <div class="article-meta">
       
-	<a href="/2018/05/14/五年/" class="article-date">
-	  <time datetime="2018-05-14T06:49:19.000Z" itemprop="datePublished">2018-05-14</time>
+	<a href="/categories/index.html" class="article-date">
+	  <time datetime="2018-05-14T08:50:00.000Z" itemprop="datePublished">2018-05-14</time>
 	</a>
 
       
@@ -195,87 +181,49 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <center>写于2018-5-7 广东洲游</center>
-
-
-<p>　　从五一放假到现在，基本每天晚上都在循环播放《我的！体育老师》，不知道为什么，每次看这部剧，都能感觉一直积攒的压力能够释放些许，王小米这个角色，满足了大多数男性对女性所有的幻想，调皮，会撒娇的同时，在生活中也是那么的善解人意，顾全大局，而且那个度又总是把握得那么好。另外就是特别喜欢王小米的那种积极的生活态度，就像她说的“生活，本来就没有什么可愁的”。<br>
-        <!--  写于2018-5-7 广东洲游
-
-
-　　从五一放假到现在，基本每天晚上都在循环播放《我的！体育老师》，不知道为什么，每次看这部剧，都能感觉一直积攒的压力能够释放些许，王小米这个角色，满足了大多数男性对女性所有的幻想，调皮，会撒娇的同时，在生活中也是那么的善解人意，顾全大局，而且那个度又总是把握得那么好。另外就是特别喜欢王小米的那种积极的生活态度，就像她说的“生活，本来就没有什么可愁的”。　......  -->
-        <p class="article-more-link">
-          <a href="/2018/05/14/五年/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/回忆/">回忆</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/生活/">生活</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-回头看，用心想，往前走"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
         
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/05/14/回头看，用心想，往前走/">回头看，用心想，往前走</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/05/14/回头看，用心想，往前走/" class="article-date">
-	  <time datetime="2018-05-14T06:49:19.000Z" itemprop="datePublished">2018-05-14</time>
-	</a>
-
-      
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p> <center>写于2014-4-8 成都游戏工场</center><br>
-        <!--  写于2014-4-8 成都游戏工场
-　　09年到14年，回头想象这跌跌荡荡的五年多，再展望即将要发生的事，是事业，还是父母，不懂，不明白，也无法理解。　　06年到09年大学三年，攻读软件工程，带着满腔的热血准备做学霸，最后被一款叫做《航海世纪》的网络游戏毁了我的前两年（设计这款游戏的人现在是我的同事），甚至是初恋女友也因为沉迷游戏玩完。过完大二的暑假，内心的急迫感发生的频率越来越高，不知道......  -->
-        <p class="article-more-link">
-          <a href="/2018/05/14/回头看，用心想，往前走/#more">阅读全文</a>
-        </p>
       
     </div>
     <footer class="article-footer">
       
       
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/回忆/">回忆</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/生活/">生活</a></li></ul>
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
 
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+      
     </footer>
   </div>
+  
+    
   
 </article>
 
 <!-- Table of Contents -->
-
-  
-
-
 </section>
         
       </div>
-      
-        <div align="center" style="margin-top: 30px;"><hr class="hr" style="margin:0px; height:3px;"></div>
       
       <footer id="footer">
   
@@ -363,8 +311,6 @@
 
 <script src="/js/scripts.js"></script>
 
-
-  <script src="/js/home.js"></script>
 
 
 
